@@ -152,10 +152,29 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-/* Media Query: Tablet */
+/* Media Query: Tablet / Desktop */
 @media (min-width: 700px) {
-}
-
-/* Media Query: Desktop */
-@media (min-width: 1400px) {
+  .article-preview {
+    width: 700px;
+    max-width: 700px;
+    display: flex;
+  }
+  .article-preview .image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    min-width: 275px;
+    min-height: 275px;
+  }
+  .article-preview .heading {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  .article-preview .content {
+    margin-bottom: 0;
+  }
+  .author {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }
