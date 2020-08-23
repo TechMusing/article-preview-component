@@ -33,7 +33,7 @@
           you make any room feel complete.
         </p>
 
-        <div class="author">
+        <div id="author" class="author">
           <img
             src="./images/avatar-michelle.jpg"
             alt="author avatar"
@@ -47,8 +47,19 @@
               28 Jun 2020
             </p>
           </div>
-          <div class="social">
-            <img src="./images/icon-share.svg" alt="share" class="share" />
+          <div class="toggle-social">
+            <button onclick="toggleSocial()" class="toggle-button"></button>
+          </div>
+        </div>
+        <div id="author-social" class="author-social hidden">
+          <span class="label">share</span>
+          <div class="social-icons">
+            <img src="./images/icon-facebook.svg" alt="facebook" />
+            <img src="./images/icon-twitter.svg" alt="twitter" />
+            <img src="./images/icon-pinterest.svg" alt="pinterest" />
+          </div>
+          <div class="toggle-social">
+            <button onclick="toggleSocial()" class="toggle-button"></button>
           </div>
         </div>
       </div>
