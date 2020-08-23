@@ -11,10 +11,78 @@ body {
   font-size: 13px;
   font-weight: 500;
   font-family: "Manrope", sans-serif;
+  min-width: 375px;
+  background: var(--light-greyish-blue);
+  /* background-image: url(./design/mobile-design.jpg); */
 }
 
-.card {
-  width: 375px;
+.article-preview {
+  max-width: 327px;
+  background: white;
+  margin: 75px auto;
+  border-radius: 10px;
+  /* opacity: 0.2; */
+}
+
+.article-preview .image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 199px;
+  width: 100%;
+}
+
+.article-preview .content {
+  margin: 30px;
+}
+
+.article-preview .heading {
+  color: var(--very-dark-greyish-blue);
+  font-size: 1.03rem;
+  line-height: 1.5rem;
+}
+
+.article-preview .synopsis {
+  margin-top: 13px;
+  margin-right: 6px;
+  color: var(--greyish-blue);
+  font-size: 0.83rem;
+  line-height: 1.25rem;
+}
+
+.author {
+  margin: 30px 0;
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.author .avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.author .details {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 16px;
+}
+
+.author .name {
+  margin: 0;
+  font-size: 0.83rem;
+  color: var(--very-dark-greyish-blue);
+}
+
+.author .date {
+  margin: 2px 0;
+  color: var(--greyish-blue);
+}
+
+.author .share {
+  margin: 10px 0 0 47px;
+  background: var(--light-greyish-blue);
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .attribution {
