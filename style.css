@@ -1,6 +1,8 @@
+/* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 
 :root {
+  /* theme */
   --very-dark-greyish-blue: hsl(217, 19%, 35%);
   --desaturated-dark-blue: hsl(214, 17%, 51%);
   --greyish-blue: hsl(212, 23%, 69%);
@@ -13,15 +15,14 @@ body {
   font-family: "Manrope", sans-serif;
   min-width: 375px;
   background: var(--light-greyish-blue);
-  /* background-image: url(./design/mobile-design.jpg); */
 }
 
+/* Article preview component */
 .article-preview {
   max-width: 327px;
   background: white;
   margin: 75px auto;
   border-radius: 10px;
-  /* opacity: 0.2; */
 }
 
 .article-preview .image {
@@ -49,6 +50,7 @@ body {
   line-height: 1.25rem;
 }
 
+/* Author */
 .author {
   margin: 38px 0;
   display: flex;
@@ -92,12 +94,13 @@ body {
   cursor: pointer;
 }
 .toggle-button:hover {
-  background: var(--greyish-blue);
+  background: var(--desaturated-dark-blue);
   background-image: url(./images/icon-share-light.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* Social popup - visible on toggle button click */
 .author-social {
   background: var(--very-dark-greyish-blue);
   display: flex;
@@ -140,6 +143,9 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Toggled via JavaScript
+   see: ./script.js
+*/
 .hidden {
   display: none;
 }
@@ -156,6 +162,7 @@ body {
 @media (min-width: 700px) {
   .article-preview {
     width: 700px;
+    height: 275px;
     max-width: 700px;
     display: flex;
   }
@@ -178,7 +185,42 @@ body {
     margin-bottom: 0;
   }
 
+  /* Don't hide the author when toggling the 
+     social bubble on Tablet / Desktop
+  */
   .author.hidden {
     display: flex;
+  }
+
+  .author-social {
+    position: relative;
+    justify-content: space-between;
+    top: -165px;
+    left: 260px;
+    width: 180px;
+    border-radius: 10px;
+  }
+
+  /* Adds the "tail" to the social bubble
+     Reference:
+     http://nicolasgallagher.com/pure-css-speech-bubbles/demo/
+  */
+  .author-social::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 105px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: var(--very-dark-greyish-blue) transparent;
+    display: block;
+    width: 0;
+  }
+
+  .author-social .toggle-social {
+    display: none;
+  }
+  .author-social .social-icons {
+    margin-right: -10px;
   }
 }
